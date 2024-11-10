@@ -1,0 +1,158 @@
+/* book-details-style.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Nixie+One&display=swap');
+
+body {
+  font-family: 'Nixie One', sans-serif;
+  background-color: #ebe8de;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.book-details-container {
+  display: flex;
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+/* Left Side: Book Cover and Purchase Information */
+.book-cover-section {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+  border-right: 2px solid #ddd;
+}
+
+.book-cover-section img {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.price {
+  font-weight: bold;
+  color: #2a664d;
+  font-size: 1.2em;
+  margin-bottom: 15px;
+}
+
+button {
+  padding: 12px 20px;
+  background-color: #2a664d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #96aa91;
+}
+
+/* Right Side: Book Information */
+.book-info-section {
+  flex: 2;
+  padding: 20px;
+}
+
+h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.2em;
+  color: #333;
+  margin-top: 0;
+}
+
+h2 {
+  color: #333;
+  margin: 5px 0 20px;
+}
+
+p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+strong {
+  color: #2a664d;
+}
+/* order-form */
+.order-form-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.order-form-content {
+  background-color: white;
+  padding: 20px;
+  margin: 10% auto;
+  width: 30%;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.order-form-content h2 {
+  text-align: center;
+  color: #333;
+}
+
+.order-form-content label {
+  display: block;
+  margin: 10px 0 5px;
+  color: #555;
+}
+
+.order-form-content input,
+.order-form-content textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+.button-container {
+  display: flex;
+  justify-content: space-between; /* Space the buttons out evenly */
+  gap: 10px; /* Optional: add some space between the buttons */
+}
+.order-form-content button[type='submit'] {
+  background-color: #2a664d;
+  padding: 12px 20px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 35%;
+}
+
+.order-form-content button {
+  background-color: #ebe0de;
+  padding: 12px 20px;
+  color: #333;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 35%;
+}
+.order-form-content button:hover {
+  background-color: #ef9b8c;
+}
+
+.order-form-content button[type='submit']:hover {
+  background-color: #96aa91;
+}

@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Nixie+One&display=swap');
+
+body {
+  background-color: #ebe8de;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  font-family: 'Great Vibes', cursive;
+  text-align: center;
+  color: #333;
+}
+
+.book-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.book-card {
+  perspective: 1000px; /* Add perspective for 3D effect */
+  margin: 15px; /* Margin between cards */
+}
+
+.card-inner {
+  position: relative;
+  width: 170px; /* Width of the card */
+  height: 280px; /* Height of the card */
+  transition: transform 0.6s; /* Animation duration */
+  transform-style: preserve-3d; /* Preserve 3D space */
+  cursor: pointer; /* Change cursor to pointer */
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Hide back face */
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-back {
+  font-family: 'Nixie One', system-ui;
+  font-weight: bold;
+  background-color: #96aa91;
+  color: #1d2a1f;
+  transform: rotateY(180deg); /* Rotate back face */
+  text-align: center;
+}
+
+.card-front img.book-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.book-card h2 {
+  color: #333;
+  font-size: 1.2em;
+  margin: 5px 0;
+  margin-top: 45%;
+  font-weight: bold;
+}
+
+.author {
+  font-weight: 350;
+  color: #1d2a1f;
+  font-size: small;
+}
+.price {
+  font-weight: bolder;
+  color: #2a664d;
+}
+
+/* Card Flip Effect */
+.book-card:hover .card-inner {
+  transform: rotateY(180deg); /* Flip the card on hover */
+}
+
+/* view-book-style.css */
+.book-link {
+  text-decoration: none;
+  color: inherit;
+}
+.book-link:hover .card-inner {
+  transform: rotateY(180deg); /* Flip the card on hover if needed */
+}
